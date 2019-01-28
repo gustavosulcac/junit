@@ -1,4 +1,4 @@
-package pe.codemy.junit;
+package pe.codemy.junit.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -17,9 +17,21 @@ public class TaxServiceTest {
 	private TaxService service = new TaxService();
 	
 	@Test
-	public void brackets() {
+	public void bracketLow() {
 		final String taxBracket = service.getBracket(500);
 		assertThat(taxBracket).isEqualTo("LOW");
+	}
+	
+	@Test
+	public void bracketMediun() {
+		final String taxBracket = service.getBracket(1250);
+		assertThat(taxBracket).isEqualTo("MEDIUM");
+	}
+	
+	@Test
+	public void bracketHigh() {
+		final String taxBracket = service.getBracket(7500);
+		assertThat(taxBracket).isEqualTo("HIGH");
 	}
 	
 	@Test

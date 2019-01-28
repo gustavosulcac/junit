@@ -11,6 +11,7 @@ public class JunitApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		JunitApplication.main(new String[] {});
 	}
 
 }
