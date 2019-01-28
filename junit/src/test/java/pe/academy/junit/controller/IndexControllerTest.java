@@ -1,4 +1,4 @@
-package pe.codemy.junit.controller;
+package pe.academy.junit.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -13,8 +13,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import pe.academy.junit.controller.IndexController;
+
 @RunWith(SpringRunner.class)
-public class NextControllerTest {
+public class IndexControllerTest {
 	private MockMvc mockMvc;
 	
 	@Before
@@ -23,16 +25,16 @@ public class NextControllerTest {
         viewResolver.setPrefix("/WEB-INF/view/");
         viewResolver.setSuffix(".jsp");
  
-        mockMvc = MockMvcBuilders.standaloneSetup(new NextController())
+        mockMvc = MockMvcBuilders.standaloneSetup(new IndexController())
                                  .setViewResolvers(viewResolver)
                                  .build();
 	}
 	
 	@Test
 	public void testIndex() throws Exception {
-		this.mockMvc.perform(get("/next"))
+		this.mockMvc.perform(get("/"))
 			.andExpect(status().isOk())
-			.andExpect(view().name("next"))
+			.andExpect(view().name("index"))
 			.andDo(print());
 	}
 }

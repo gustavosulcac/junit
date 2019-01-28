@@ -1,4 +1,4 @@
-package pe.codemy.junit.controller;
+package pe.academy.junit.controller;
 
 import java.util.Map;
 

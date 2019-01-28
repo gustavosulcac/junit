@@ -1,4 +1,4 @@
-package pe.codemy.junit;
+package pe.academy.junit;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

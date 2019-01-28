@@ -1,4 +1,4 @@
-package pe.codemy.junit.service;
+package pe.academy.junit.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import pe.codemy.junit.service.TaxService;
+import pe.academy.junit.service.TaxService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
